@@ -1,0 +1,38 @@
+.Espacio{
+  padding: 20px;
+
+  }
+
+.compra{
+background-color:#fd7e14;
+font-size: 15px;
+border-color: #fd7e14;
+
+
+}
+
+.agregar{
+
+background-color: white;
+font-size: 15px;
+border-color:#fd7e14
+
+
+}
+.agregarT{
+color:#fd7e14
+
+}
+
+.btn-primary{
+
+font-size: 20px;
+
+
+
+}
+
+.col{
+  position: center;
+  padding-left: 25px ;
+}
