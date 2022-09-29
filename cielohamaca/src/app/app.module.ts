@@ -11,7 +11,12 @@ import { FormComponent } from './data/form/form.component';
   declarations: [
     AppComponent,
     LoginComponent,
+
     FormComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
   ],
     imports: [
         BrowserModule,

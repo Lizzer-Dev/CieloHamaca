@@ -28,6 +28,4 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.pattern('^.{8,12}$')]],
     })
   }
-
-
 }

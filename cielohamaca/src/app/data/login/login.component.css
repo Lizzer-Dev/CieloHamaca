@@ -9,6 +9,10 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
+.form-signin label {
+  padding: 10px 0;
+}
+
 input.form-control.rounded {
   border-radius: 0.5rem
 }
