@@ -10,19 +10,22 @@ export class LoginComponent implements OnInit {
 
   contactForm!: FormGroup;
 
-  constructor(private readonly fb: FormBuilder) { }
+  constructor(private  readonly fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.contactForm = this.initForm();
   }
 
   onSubmit(): void {
-    console.log('Form ->')
+    if (this.contactForm.errors) {
+      return alert("Datos incorrectos");
+    }
   }
 
-  initForm(): FormGroup{
+  initForm(): FormGroup {
     return this.fb.group({
-      email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$')]],
+      email: ['', [Validators.email, Validators.pattern('[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$'), Validators.required]],
+      password: ['', [Validators.required, Validators.pattern('^.{8,12}$')]],
     })
   }
 }
