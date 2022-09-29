@@ -1,0 +1,54 @@
+
+*{
+  font-family: Helvetica,Helvetica Neue,Arial,Lucida Grande,sans-serif;
+}
+
+.navbar{
+  justify-content: unset;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height:4.5rem;
+  width: 4.5rem;
+}
+.fl{
+  display:flex;
+}
+
+.title {
+  font-size: 1.7rem;
+  margin-left: 1.5rem;
+  font-weight: 300;
+}
+
+.list{
+  padding:5px;
+  list-style:none;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  margin:auto;
+}
+.light{
+  font-weight: 300;
+}
+.bg-cielo{
+  border-bottom: 1px solid #ced4da;
+}
+.btn-ingresar{
+  display: flex;
+  font-size:1rem;
+  color:black;
+  margin:auto;
+}
+
+.btn-ingresar:hover{
+  cursor: pointer;
+  transform: scale(1.0);
+  color:#e79842;
+}
