@@ -17,12 +17,15 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log('->');
+    if (this.contactForm.errors) {
+      return alert("Datos incorrectos");
+    }
   }
 
   initForm(): FormGroup {
     return this.fb.group({
       email: ['', [Validators.email, Validators.pattern('[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$'), Validators.required]],
+      password: ['', [Validators.required, Validators.pattern('^.{8,12}$')]],
     })
   }
 

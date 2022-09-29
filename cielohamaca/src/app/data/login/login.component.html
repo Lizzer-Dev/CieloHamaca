@@ -1,28 +1,45 @@
-<div class="container" >
-  <div class="row">
+<div class="container">
+  <div class="row dsr-center">
     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
       <div class="card card-signin my-5">
         <div class="card-body">
-          <h5 class="card-title text-center">Iniciar sesión</h5>
-          <form (ngSubmit)="onSubmit()" [formGroup]="contactForm"
-            class="form-signin">
+          <h2 class="card-title text-center">Iniciar sesión</h2>
+          <div class="logo-content">
+            <img src="../../../assets/images/cielohamacas-logo.webp" alt="logo" class="logo">
+          </div>
+          <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" novalidate
+                class="form-signin">
             <div class="form-group">
               <label for="email">Correo electrónico</label>
-              <input type="email" class="form-control rounded" id="email" placeholder="Enter email" formControlName="email">
-            </div>
-
-            <div class="form-group">
-              <label for="inputPassword">Contraseña</label>
-              <input type="password" class="form-control rounded" id="inputPassword" aria-describedby="passwordHelp" placeholder="Enter password" formControlName="password">
+              <input type="email" class="form-control rounded" id="email"
+                     formControlName="email">
             </div>
 
             <p
               *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['pattern']"
-              class="alert alert-danger" role="alert" >
-              <strong>Se a producido un error!</strong><br>Verifica que su correo esté bien escrito.
+              class="alert alert-danger" role="alert"
+            >
+              <strong>Se ha producido un error.</strong><br>Verifica que su correo electrónico esté bien escrito.
             </p>
 
-            <button id="submitButton" class="btn btn-lg btn-primary btn-block text-uppercase" type="button" >Emviar</button>
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input type="password" class="form-control rounded" id="password" formControlName="password">
+            </div>
+
+            <p
+              *ngIf="contactForm.get('password')?.touched && contactForm.get('password')?.errors?.['pattern']"
+              class="alert alert-danger" role="alert"
+            >
+              <strong>Se ha producido un error.</strong><br>Contraseña inválida
+            </p>
+
+            <button id="submitButton" class="btn btn-lg btn-primary btn-block text-uppercase" type="button">
+              Iniciar
+              sesión
+            </button>
+
+
 
           </form>
         </div>
