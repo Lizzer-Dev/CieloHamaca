@@ -3,23 +3,25 @@
     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
       <div class="card card-signin my-5">
         <div class="card-body">
-          <h5 class="card-title text-center">Iniciar sesión</h5>
-          <form class="form-signin">
+          <h5 class="card-title text-center">Inicio de sesión</h5>
+          <form class="form-signin" (ngSubmit)="onSubmit()" [formGroup]="contactForm">
             <div class="form-group">
-              <label for="inputEmail">Correo electrónico</label>
-              <input type="email" class="form-control rounded" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" formControlName="username">
+              <label  for="inputEmail">Correo electrónico</label>
+              <input  type="email" class="form-control rounded" id="inputEmail" aria-describedby="emailHelp" placeholder="Introduzca su correo electrónico" formControlName="username">
             </div>
 
             <div class="form-group">
               <label for="inputPassword">Contraseña</label>
-              <input type="password" class="form-control rounded" id="inputPassword" aria-describedby="passwordHelp" placeholder="Enter password" formControlName="password">
+              <input type="password" class="form-control rounded" id="inputPassword" aria-describedby="passwordHelp" placeholder="Introduzca su contraseña" formControlName="password">
             </div>
 
-            <p class="alert alert-danger" role="alert" >
+            <p
+              *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['pattern']"
+              class="alert alert-danger" role="alert" >
               <strong>There was an error!</strong><br>Please check your username/password and try again.
             </p>
 
-            <button id="submitButton" class="btn btn-lg btn-primary btn-block text-uppercase" type="button" >Emviar</button>
+            <button id="submitButton" class="btn btn-lg btn-primary btn-block text-uppercase" type="button" >Iniciar sesión</button>
 
           </form>
         </div>
