@@ -5,6 +5,7 @@
 
 .navbar{
   justify-content: unset;
+  background-color: aliceblue;
 }
 
 .banner {
@@ -39,6 +40,7 @@
 }
 .bg-cielo{
   border-bottom: 1px solid #ced4da;
+  background-color: white;
 }
 .btn-ingresar{
   display: flex;
